@@ -1,0 +1,58 @@
+footer {
+    background: #04251E;
+    color: #D2AC47;
+}
+
+.footer {
+    display: block;
+    text-align: center;
+
+    @mixin atMedium {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    &__head {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @mixin forSmall {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__logo {
+        width: 200px;
+        margin: 0 auto 1.5rem auto; 
+        @mixin atMedium {
+            margin-bottom: 3rem;
+            width: 275px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-around;   
+        align-items: center;
+        flex-direction: column;
+        @mixin atMedium {
+            flex-direction: row;
+        }
+    }
+}
+
+.footer > div {
+    margin-top: 2.5rem;
+    @mixin atMedium {
+        margin-top: 0;
+    }
+}
+
+.footer-text {
+    text-align: center;
+    padding: 5px;
+}
+
+.fa-clr {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,38 @@
+.exclusive {
+    background: $gold;
+    color: $greenish;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        div {
+            flex: 1;
+            margin: 2rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            margin: 0;
+            font-size: 1.5rem;
+
+            span {
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    img {
+        border-top-right-radius: 5rem;
+        border-bottom-left-radius: 5rem;
+    }
+}

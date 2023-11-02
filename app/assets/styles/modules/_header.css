@@ -1,0 +1,272 @@
+.site-header {
+    background: url('./assets/images/4.jpg') no-repeat center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    @mixin atMedium {
+        height: 100vh;
+    }
+    transition: all 1s ease-out;
+
+    &--is-visible {
+        img {
+            display: none;
+        }
+        background: linear-gradient(45deg, $black, $greenish, $greenish, $black);
+    }
+    
+    img {
+        margin-top: 50%;
+        width: 180px;
+        @mixin atMedium {
+            width: 300px;
+            margin-top: 13%;
+        }        
+        height: auto;
+        animation: logo-animate 8s ease infinite;
+    }
+
+    @keyframes logo-animate {
+        from { transform: scale(0); }
+        to { transform: scale(1); }
+    }
+
+    .site-header__nav {
+        display: none;
+        transition: all 1s ease-out;
+        &--is-visible {
+            display: flex;
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            li {
+                list-style-type: none;
+                margin-top:5rem;
+
+                a {
+                    text-decoration: none;
+                    color: $gold;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+
+                    @mixin atMedium {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu-icon {
+        width: 20px;
+        height: 19px;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        z-index: 10;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $gold;
+            width: 20px;
+            height: 3px;
+            transform-origin: 0 0; /*top left point*/
+            transition: transform .3s ease-out;
+        }
+
+        &__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            background-color: $gold;
+            width: 20px;
+            height: 3px;
+            transition: all .3s ease-out;
+            transform-origin: 0 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $gold;
+            width: 20px;
+            height: 3px;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+        }
+    }
+
+    &__menu-icon--close-x {
+        &::before {
+            transform: rotate(45deg) scaleX(1.25);
+        }
+
+        .site-header__menu-icon__middle {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+        }
+    }
+
+    &--is-expanded {
+        background-color: $black;
+    }
+}
+
+/*.site-header {
+    background: url('./assets/images/4.jpg') no-repeat center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    @mixin atMedium {
+        height: 100vh;
+    }
+    transition: all 1s ease-out;
+
+    &--is-visible {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transform: scale(1);
+        z-index: 1;
+        background: $black;
+        
+        img {
+            display: none;
+        }
+    }
+    
+    img {
+        width: 180px;
+        margin-top: 50%;
+        @mixin atMedium {
+            width: 300px;
+            margin-top: 13%;
+        }        
+        height: auto;
+        animation: logo-animate 8s ease infinite;
+    }
+
+    @keyframes logo-animate {
+        from { transform: scale(0); }
+        to { transform: scale(1); }
+    }
+
+    .site-header__nav {
+        display: none;
+        transition: all 1s ease-out;
+        &--is-visible {
+            display: flex;
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            li {
+                list-style-type: none;
+                margin-top:5rem;
+
+                a {
+                    text-decoration: none;
+                    color: goldenrod;
+                    font-size: 1.2rem;
+
+                    @mixin atMedium {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu-icon {
+        width: 20px;
+        height: 19px;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        z-index: 10;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: goldenrod;
+            width: 20px;
+            height: 3px;
+            transform-origin: 0 0; /*top left point*//*
+            transition: transform .3s ease-out;
+        }
+
+        &__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            background-color: goldenrod;
+            width: 20px;
+            height: 3px;
+            transition: all .3s ease-out;
+            transform-origin: 0 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: goldenrod;
+            width: 20px;
+            height: 3px;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+        }
+    }
+
+    &__menu-icon--close-x {
+        &::before {
+            transform: rotate(45deg) scaleX(1.25);
+        }
+
+        .site-header__menu-icon__middle {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+        }
+    }
+
+    &--is-expanded {
+        background-color: $black;
+    }
+}*/

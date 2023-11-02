@@ -1,0 +1,17 @@
+.products {
+    background: linear-gradient(90deg, $greenish, $black);
+    /*background: $gold;*/
+
+    &__title {
+        color: $white;
+        text-align: center;
+    }
+
+    &__items {
+        display: grid;
+        gap: 2rem;
+        @mixin atMedium {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}

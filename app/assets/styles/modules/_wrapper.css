@@ -13,3 +13,42 @@
         padding: 3.125rem 12rem;
     }
 }
+
+/*.wrapper {
+    max-width: 50rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.site-title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.25rem;
+}
+
+section {
+    padding-block: 5rem;
+}*/
+
+
+/*.diagonal {
+    --skew-angle: skewY(-5deg);
+    --background: linear-gradient(
+        45deg,
+        #12c2e9, #c471ed, #f64f59
+    );
+    position: relative;
+    isolation: isolate;
+}
+
+.diagonal::after {
+    content: '';
+    background: var(--background);
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transform: var(--skew-angle);
+}*/

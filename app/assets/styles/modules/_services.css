@@ -1,0 +1,33 @@
+.services {
+    background: linear-gradient(90deg, $black, $greenish);
+    /*background-image: url('./assets/images/9.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+    color: $white;
+    
+    &__desc {
+        max-width: 700px;
+        text-align: center;
+        margin: auto;
+
+        &__title {
+            color: $white;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 3rem auto;
+        flex-wrap: wrap;
+        @mixin atMedium {
+            flex-wrap: nowrap;
+        }
+
+        div {
+            margin: .5rem;
+        }
+    }
+}
