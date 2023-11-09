@@ -1,0 +1,49 @@
+.highlight {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background: $gold;
+
+    div {
+        flex: auto;
+        @mixin atMedium {
+            flex: 1;
+        }
+    }
+
+    &__img {
+        background-image: url('./assets/images/27.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+        @mixin atMedium {
+            height: 70vh;
+        }
+        @mixin forSmall {
+            order: 2;
+        }
+    }
+
+    &__img2 {
+        background-image: url('./assets/images/20.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+        @mixin atMedium {
+            height: 70vh;
+        }
+    }
+
+    &__desc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+        @mixin atMedium {
+            padding: 4rem;
+        }
+    }
+}

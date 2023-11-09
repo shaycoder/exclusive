@@ -15,3 +15,15 @@
         }
     }
 }
+
+.collections {
+    /*background: $gold;*/
+    background-image: url('./assets/images/9.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    &__title {
+        color: $gold;
+    }
+}

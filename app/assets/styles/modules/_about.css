@@ -1,48 +1,45 @@
 .about {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-
-    div {
-        flex: auto;
-        @mixin atMedium {
-            flex: 1;
-        }
+    /*background: $gold;*/
+    background-image: url('./assets/images/9.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    color: $white;
+    @mixin forSmall {
+        padding: .5rem;
     }
 
-    &__img {
-        background-image: url('./assets/images/27.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 50vh;
-        @mixin atMedium {
-            height: 70vh;
-        }
-        @mixin forSmall {
-            order: 2;
-        }
+    &__title {
+        text-align: center;
+        color: $gold;
     }
 
-    &__img2 {
-        background-image: url('./assets/images/20.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 50vh;
-        @mixin atMedium {
-            height: 70vh;
-        }
+    &__top {
+        margin-inline: auto;
+        padding-inline: 1.5rem;
     }
 
-    &__desc {
+    &__bottom {
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-direction: column;
-        padding: 2rem;
-        @mixin atMedium {
-            padding: 4rem;
+        align-items: center;
+        flex-wrap: wrap;
+
+        div {
+            flex: auto;
+            padding: 1.5rem;
+            @mixin atMedium {
+                flex: 1;
+            }
+
+            img {
+                /*border-bottom-right-radius: 5rem;*/
+            }
+
+            h3 {
+                margin: 0;
+                color: $gold;
+            }
         }
     }
 }

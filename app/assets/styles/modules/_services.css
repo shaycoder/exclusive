@@ -14,6 +14,14 @@
         &__title {
             color: $white;
         }
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            margin-bottom: 5rem;
+        }
     }
 
     &__item {

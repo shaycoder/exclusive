@@ -1,0 +1,85 @@
+.contact-section {
+    background-color: $gold;
+    background-image:  radial-gradient($greenish 0.5px, transparent 0.5px), radial-gradient($greenish 0.5px, $gold 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*background: $gold;*/
+    /*background-image: url('./assets/images/9.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+    color: $greenish;
+
+    h2 {
+        margin: 0;
+
+    }
+
+    p {
+        margin-bottom: 3rem;
+        @mixin forSmall {
+            text-align: center;
+        }
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        @mixin atMedium {
+            width: 40vw;
+        }
+        margin-bottom: 1rem;
+
+        label {
+            padding: .75rem 0;
+            font-size: 1rem;
+            font-weight: 500;
+            
+            @mixin atMedium {
+                font-size: 1.19rem;
+            }
+        }
+
+        &__input {
+            border: none;
+            outline: none;
+            padding: .70rem 1rem;
+            font-size: .95rem;
+
+            @mixin atMedium {
+                font-size: 1.1rem;
+                padding: .75rem 1.2rem;
+            }
+            border-radius: 5px;
+            
+        }
+
+        &__btn {
+            margin-top: 3rem;
+            background: linear-gradient(45deg, $greenish, $black); 
+            color: $gold;
+            padding: 0.7rem 1.6rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: none;
+            transition: transform .5s ease-out;
+            cursor: pointer;
+            align-self: center;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+

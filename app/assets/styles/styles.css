@@ -4,10 +4,12 @@
 @import "base/_global";
 @import "modules/_wrapper";
 @import "modules/_header";
-@import "modules/_about";
+@import "modules/_sub-header";
+@import "modules/_highlight";
 @import "modules/_services";
-@import "modules/_diagonal";
 @import "modules/_products";
 @import "modules/_exclusive";
+@import "modules/_about";
+@import "modules/_contact";
 @import "modules/_footer";
 @import "aos/dist/aos.css";

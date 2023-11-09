@@ -10,20 +10,31 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        @mixin forSmall {
+            flex-direction: column;
+        }
 
         div {
-            flex: 1;
-            margin: 2rem;
+            flex: auto;
+            margin: .5rem;
+            @mixin atMedium {
+                flex: 1;
+                margin: 2rem;
+            }
         }
     }
 
     &__item {
         display: flex;
         flex-direction: column;
+        @mixin forSmall {
+            text-align: center;
+        }
 
         h3 {
             margin: 0;
             font-size: 1.5rem;
+            text-transform: uppercase;
 
             span {
                 margin-right: .5rem;
