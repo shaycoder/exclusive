@@ -11,7 +11,6 @@ html, body {
 body {
     font-family: 'Times New Roman', serif;
     font-size: 1.25rem;
-    line-height: 1.5;
     margin: 0;
 }
 
@@ -26,7 +25,9 @@ img {
 
 h2 {
     color: #04251E;
-    font-size: 3rem;
+    @mixin atMedium {
+        font-size: 3rem;
+    }    
 }
 
 .go-to-top {
@@ -45,5 +46,9 @@ h2 {
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    @mixin atMedium {
+        font-size: 1.3rem;
+    }
 }

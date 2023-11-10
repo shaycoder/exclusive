@@ -33,12 +33,21 @@
 
         h3 {
             margin: 0;
-            font-size: 1.5rem;
-            text-transform: uppercase;
+            font-size: 1.2rem;
+            @mixin atMedium {
+                font-size: 1.5rem;
+            }
+            text-transform: capitalize;
 
             span {
                 margin-right: .5rem;
             }
+        }
+    }
+
+    &__sec {
+        h3, p {
+            text-align: left;
         }
     }
 

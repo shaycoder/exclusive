@@ -53,7 +53,10 @@
                 a {
                     text-decoration: none;
                     color: $gold;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
+                    @mixin atMedium {
+                        font-size: 1.2rem;
+                    }
                     font-weight: bold;
 
                     @mixin atMedium {
