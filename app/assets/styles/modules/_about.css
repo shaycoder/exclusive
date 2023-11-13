@@ -1,9 +1,9 @@
 .about {
-    /*background: $gold;*/
-    background-image: url('./assets/images/9.jpg');
+    background: $black;
+    /*background-image: url('./assets/images/9.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: cover;
+    background-size: cover;*/
     color: $white;
     @mixin forSmall {
         padding: .5rem;
@@ -33,12 +33,12 @@
             }
 
             img {
-                /*border-bottom-right-radius: 5rem;*/
+                border-bottom-right-radius: 5rem;
             }
 
             h3 {
                 margin: 0;
-                color: $gold;
+                @mixin textGradient;
             }
         }
     }

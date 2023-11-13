@@ -21,3 +21,9 @@
         @mixin-content;
     }
 }
+
+@define-mixin textGradient {
+    background: -webkit-linear-gradient(#ae8625, #f7ef8a, #ecc440);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

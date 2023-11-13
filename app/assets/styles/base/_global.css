@@ -1,6 +1,5 @@
 html {
     scroll-behavior: smooth;
-    color-scheme: dark light;
 }
 
 html, body {
@@ -15,6 +14,7 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -24,7 +24,7 @@ img {
 }
 
 h2 {
-    color: #04251E;
+    @mixin textGradient;
     @mixin atMedium {
         font-size: 3rem;
     }    
@@ -41,7 +41,7 @@ h2 {
     font-size: 1.5rem;
 
     a {
-       color: #D2AC47;
+        @mixin textGradient;
     }
 }
 
@@ -50,5 +50,20 @@ p {
     line-height: 1.6;
     @mixin atMedium {
         font-size: 1.3rem;
+    }
+}
+
+.text-bold {
+    font-weight: bold;
+    @mixin textGradient;
+}
+
+.pattern {
+    background: $greenish;
+    img {
+        @mixin atMedium {
+            width: 100%;
+            height: 15vh;
+        }
     }
 }

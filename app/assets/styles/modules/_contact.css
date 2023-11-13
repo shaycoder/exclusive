@@ -1,8 +1,9 @@
 .contact-section {
-    background-color: $gold;
+    /*background-color: $gold;
     background-image:  radial-gradient($greenish 0.5px, transparent 0.5px), radial-gradient($greenish 0.5px, $gold 0.5px);
     background-size: 20px 20px;
-    background-position: 0 0,10px 10px;
+    background-position: 0 0,10px 10px;*/
+    background: $black;
 }
 
 .contact {
@@ -15,7 +16,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;*/
-    color: $greenish;
+    color: $white;
 
     h2 {
         margin: 0;
@@ -64,7 +65,7 @@
 
         &__btn {
             margin-top: 3rem;
-            background: linear-gradient(45deg, $greenish, $black); 
+            background: linear-gradient(45deg, $gold, $greenish, $greenish, $gold); 
             color: $gold;
             padding: 0.7rem 1.6rem;
             border-radius: 2rem;

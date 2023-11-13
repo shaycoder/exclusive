@@ -1,8 +1,9 @@
 .exclusive {
-    background: $gold;
-    color: $greenish;
+    background: $greenish;
+    color: $white;
 
     &__title {
+        color: $gold;
         text-align: center;
     }
 
@@ -32,6 +33,7 @@
         }
 
         h3 {
+            @mixin textGradient;
             margin: 0;
             font-size: 1.2rem;
             @mixin atMedium {

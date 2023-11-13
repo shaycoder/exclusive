@@ -1,6 +1,6 @@
 footer {
-    background: #04251E;
-    color: #D2AC47;
+    background: $greenish;
+    color: $white;
 }
 
 .footer {
@@ -55,4 +55,5 @@ footer {
 
 .fa-clr {
     font-size: 1.5rem;
+    @mixin textGradient;
 }
